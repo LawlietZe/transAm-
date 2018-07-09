@@ -79,6 +79,19 @@ commit在你最终push到远程仓库之前一直存在你的本地，所以他�
 git add. 
 git add <path/to/file>
 ```
+这些文件会由unstaged状态转化为stage状态. 你可以通过**git status**指令进行查看.当文件处于staged状态，表示它们可以被committed，同样的我们也可以
+通过``` git reset HEAD <path/to/file>``` 指令把staged状态的文件还原回unstaged状态。 
+其次，你可以commit操作已经处于staged状态的文件, commit操作写下相关操作的信息。有两种commit的方式。你可以通过简写commit命令去添加commit的信息
+在同一行内:
+```
+git commit -m "<message>"
+```
+同时你可以用默认的commit操作去在多行文本中描述详细的commit操作的信息。
+```
+git commit 
+```
+接下来，命令行会打开一个默认的命令行编辑器。通常情况下，这个默认的命令行编辑器是vim，在vim中你可以输入你的commit信息。在这之后你可以保存和退出vim
+通过 **:wq** 操作, 这个操作表示写入和退出，大多数情况下，使用commit简写就已经足够了，它写起来只有一句话的commit信息是绰绰有余的。
 
 
 
