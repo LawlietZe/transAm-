@@ -112,5 +112,23 @@ pull rebase和 pull之间究竟有什么区别呢？ 一个基本的**git pull**
 如果你有改动不，不过还没commit，当你从远程仓库pull代码的时候，你会被通知应该先保存(stash)好你已经改动的文件。在你pull所有的改动之后，你可以
 继续使用stash。在接下来的文章会讲到stash。
   ##### Git 状态，日记，历史
+这里有三个关于你项目当前状态改动的命令。它们不会改变你项目，而是给你展示你项目的信息。举例子，你想要查看本地staged 和 unstaged的文件，你可以
+输入
+```
+git status
+```
+你想要查看本地为unstage和当前commit的比较可以输入
+```
+git diff
+```
+你也可以随时查看commit的历史记录
+```
+git log
+```
+默认的**git log** 对大多数人没有帮助。每个commit占用了太多空间，不方便去查看历史。你可以使用下面的配置
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+现在你可以用**git lg**代替git log, 试试看区别吧~
 
 
