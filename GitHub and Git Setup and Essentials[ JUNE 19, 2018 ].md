@@ -130,5 +130,36 @@ git log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 现在你可以用**git lg**代替git log, 试试看区别吧~
+  ##### 分支
+Git分支通常用来做多个用例时使用。想象你正在为你的项目添加新的功能，你想创建一个新分支去跟踪你的改动，让它独立于整个项目，更详细的来说：
+从master分支独立出来。在你把分支merge到master分支之前，你可以review你的改动。  
+另外一个用例是当你以开发小组的形式工作的时候，你想要给其他人在改进项目、增加新功能、修复Bug的时候能保持工作独立自由，因此，把代码从master分支
+中做出分离开始很合理的，在这种情况下。**在创建branch的时候用什么关键的命令呢?** , 你可以创建一个分支，通过使用
+```
+git checkout -b <branch>
+```
+或者分支已经存在的情况下
+```
+git checkout <branch>
+```
+当分支是被其他合作的同事创建的，但是你本地仓库还不知道这个变动，你可以从远程fetch变动到本地，分支比较在远程已经被跟踪了。在这之后，你可以在你
+本地切出一个分支。
+```
+git fetch
+git checkout <branch>
+```
+一旦你在分支上，你可以从远程仓库pull下来最近的所有改动
+```
+git pull --rebase origin <branch>
+```
+现在你可以改动代码，``` git add .  ``` 和 ``` git commit ```来改动他们，最后接下来push它们到远程。不过不是把它们推送到远程master分支，
+而是push到对应的分支
+```
+git push origin <branch>
+```
+现在你就是工作在所谓的“新功能分支”上了，其他开发者可以在这些分支上与你合作，最后merge一个 Pull Request到master分支。
+
+
+
 
 
