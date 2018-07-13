@@ -158,7 +158,29 @@ git pull --rebase origin <branch>
 git push origin <branch>
 ```
 现在你就是工作在所谓的“新功能分支”上了，其他开发者可以在这些分支上与你合作，最后merge一个 Pull Request到master分支。
-
+  ##### Merge一个Pull Request
+有的时候，你想要把一个分支merge到master分支上。你应该在merge之前使用Github操作界面去新建一个Pull Request(PR), Pull Request
+操作能够有以下的帮助：助于讨论，合作review代码，提升代码质量以及跨合作者的知识分享。
+在新建一个PR之前，我通常用一下几个方法切换出分支，更新所有变动并merge到我自己的代码中，同样从master分支中或许所有最近的改动，然后强制的push
+所有变动去远程的本分支。
+首先，当在master分支上时，更新master分支的最近改动：
+```
+git pull --rebase origin master
+```
+第二，切出分支:
+```
+git checkout <branch>
+```
+如果你还没有分支，在你准备切出分支之前,从远程fetch所有的分支在本地。
+```
+git fetch
+git checkout <branch>
+```
+第三步，从远程拉取这个分支的最新改动。
+```
+git pull --rebase origin <branch>
+```
+第四步，
 
 
 
