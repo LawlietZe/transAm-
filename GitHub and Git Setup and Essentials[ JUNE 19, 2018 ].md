@@ -180,7 +180,16 @@ git checkout <branch>
 ```
 git pull --rebase origin <branch>
 ```
-第四步，
+第四步，从master分支top上rebase所有本地的变动:
+```
+git rebase master
+```
+最后一点，push所有的改动到远程分支
+```
+git push -f origin <branch>
+```
+这个分支和所有的协作人员的改动已经同步，包括你的改动和来自远程分支的改动。最后，当所有分支在远程仓库上已经更新，你可以在Github上点击
+"Merge Pull Request"按钮
 
 
 
