@@ -215,7 +215,13 @@ git rebase --continue
   ```
   git checkout -- <path/to/file>
   ```
-  
+   ##### 删除分支
+一旦你merge了 Pull Request, 你你通常会想删除远程和本地的分支
+```
+git branch -d <branch>
+git push origin :<branch>
+```
+第一个命令删除你本地机器上的分支，第二个则是删除远程的分支。经常清理是一件好事，应该养成这样的好习惯。
 
 
 
