@@ -223,6 +223,18 @@ git push origin :<branch>
 ```
 第一个命令删除你本地机器上的分支，第二个则是删除远程的分支。经常清理是一件好事，应该养成这样的好习惯。
 
-
+   ##### 改动Rebase
+我必须承认的是，这个命令不算是比较重要的，不过我我经常用它来组织我分支上的commit。 我喜欢在提出一个PR给别人之前有一个干净的分支。
+把一个分支清洁意味着把commits形成一个有意义的顺序，或者是重写commit信息和'挤压'commit，挤压'commit意味着把多个commit合并成一个.
+当你使用interact rebase的时候，你可以决定有多少commit 需要手动的调整.
+```
+git rebase -i HEAD˜<number>
+```
+在此之后，自从你改动过Git history,你需要强制push你的change.你一个强制Push回复该你远程仓库的git commits
+```
+git push -f origin master
+```
+通常来说你应该在使用强制push的时候谨慎一些，最好的是你在你的分支上进行处理，而不是在master分支上。在大型项目里，一个强制push在master分支上
+是不被允许的。
 
 
