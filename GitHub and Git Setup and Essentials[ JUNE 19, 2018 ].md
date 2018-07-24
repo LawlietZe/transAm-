@@ -253,4 +253,7 @@ git push -f origin master
   git commit -m 'feat(todo-list) add filter feature
 ```
 这个就是保持commit信息干净整洁的方法
+   ##### Git简写
+Git别称通常由built-in Git命令行来制作自己的Git 命令。别称允许你把Git 操作制作的更简洁的去组织他们。举个例子，你可以组织两行命令成一行。
+ 
 
