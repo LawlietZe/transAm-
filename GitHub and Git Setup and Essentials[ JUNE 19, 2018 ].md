@@ -236,5 +236,21 @@ git push -f origin master
 ```
 通常来说你应该在使用强制push的时候谨慎一些，最好的是你在你的分支上进行处理，而不是在master分支上。在大型项目里，一个强制push在master分支上
 是不被允许的。
-
+   ##### Commit 信息守则
+ 当你正在和其他人合作或者是说你自己想要一个简洁的commit信息，你可以遵循git commit 信息守则.这里有几个守则，我从angular 社区里面找来了几个
+ 我经常遵循的守则:
+- feat: 添加新特性
+- fix : 一个bug修复
+- docs: 一个文档更新
+- style: 代码样式变动, 但是不改动实施细节
+- refactor: 代码既不是修复bug，也不是新增功能
+- perf: 优化性能的代码
+- test: 测试你的代码
+- chore: 对构建过程或辅助工具和库的更改
+遵循这个语法: <type>(<scope>): <subject>
+举个例子:
+```
+  git commit -m 'feat(todo-list) add filter feature
+```
+这个就是保持commit信息干净整洁的方法
 
