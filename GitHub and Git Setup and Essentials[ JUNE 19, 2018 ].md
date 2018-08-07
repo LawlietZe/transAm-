@@ -255,5 +255,34 @@ git push -f origin master
 这个就是保持commit信息干净整洁的方法
    ##### Git简写
 Git别称通常由built-in Git命令行来制作自己的Git 命令。别称允许你把Git 操作制作的更简洁的去组织他们。举个例子，你可以组织两行命令成一行。
-
+   ##### Pull Request vs Issues
+Pull Request(PR) 以及 issues 在多人合作的时候会用到。
+当你组里一个人创建了一个分支去开发一个独立的功能的时候，这个分支最终会回归到一个PR。一个PR可以被你一个项目组里的人进行复查，你可以进行讨论，
+  复查之后merge相关的代码，或者关掉这个PR。
+  一个issue经常在一个分支和PR被创建之后打开。一个issue声明了在项目里的一个问题并激励大家去讨论。这些讨论最终可以形成一个作为解决问题的蓝图的说明书
+ ，因此，你会创建一个基于这个issues的PR。issuer也可以被标记来保持对不同类型issuer的追踪。  
+  最后，也可以私人使用PR以及issues,在一个人的项目仓库中，尽管你是一个人工作，你可以使用这些Github上的特性去保持问题和变动的更好跟踪。  
+  这些Github和Git的关键点应该是你在这个领域开始时能够用到的所有东西了，你不应该被安装或者命令给难到。毕竟所有的命令被被拆解之后可以被用在几个重要的场景中。  
+  几个重要的Git 命令：
+  - git init
+  - git clone
+  - git add
+  - git commit
+  - git push
+  - git pull -rebase
+  - git fetch
+  - git status
+  - git log
+  - git diff 
+当然，还有很多的Git 命令(git bisect, git reflog) 等等你可以掌握。然后我觉得不经常用到它们。你可以一旦你需要它们再去预览它们，不必强行去记忆。
+ 
+ 
+ 扩展阅读:
+ [The minimal Node.js with Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup/)
+ [The minimal React + Webpack 4 + Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup/)
+  
+  
+  
+  
+  
 
