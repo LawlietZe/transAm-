@@ -278,7 +278,8 @@ Pull Request(PR) 以及 issues 在多人合作的时候会用到。
  
  
  扩展阅读:
- [The minimal Node.js with Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup/)
+ [The minimal Node.js with Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup/) 
+ 
  [The minimal React + Webpack 4 + Babel Setup](https://www.robinwieruch.de/minimal-node-js-babel-setup/)
   
   
